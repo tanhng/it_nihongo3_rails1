@@ -1,0 +1,8 @@
+<h1>StaticPages#home</h1>
+
+<p>Find me in app/views/static_pages/home.html.erb</p>
+<% if user_signed_in? %>
+  <%= link_to "Book", books_url , :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Book", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
